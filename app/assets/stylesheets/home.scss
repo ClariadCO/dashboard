@@ -408,7 +408,7 @@ h5.pro-link {
     -o-border-radius: 50%;
 }
 .details-grid {
-    background: url("home/bg.jpg") no-repeat 0px 0px;
+    background: image-url("home/bg.jpg") no-repeat 0px 0px;
     background-size: cover;
   -webkit-background-size: cover;
    -moz-background-size: cover;
@@ -666,22 +666,22 @@ padding:8px 0;
 }
 
 .hi-icon.goal-icon1{
-    background:url(../images/pic1hover.png) no-repeat 15px 10px;
+    background: image-url("home/pic1hover.png") no-repeat 15px 10px;
     width: 67px;
     height: 67px;
 }
 .hi-icon.goal-icon2{
-    background:url(../images/pic2hover.png) no-repeat 15px 10px;
+    background: image-url("home/pic2hover.png") no-repeat 15px 10px;
     width: 67px;
     height: 67px;
 }
 .hi-icon.goal-icon3{
-    background:url(../images/pic4hover.png) no-repeat 15px 10px;
+    background: image-url("home/pic4hover.png") no-repeat 15px 10px;
     width: 67px;
     height: 67px;
 }
 .hi-icon.goal-icon4{
-    background:url(../images/pic5hover.png) no-repeat 15px 10px;
+    background: image-url("home/pic5hover.png") no-repeat 15px 10px;
     width: 67px;
     height: 67px;
 }
