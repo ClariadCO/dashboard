@@ -1,0 +1,112 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %title App
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "Apps", :name => "keywords"}/
+    :javascript
+      addEventListener("load", function() {
+        setTimeout(hideURLbar, 0);
+      }, false);
+      
+      function hideURLbar() {
+        window.scrollTo(0, 1);
+      }
+    %meta{:charset => "", :utf => "8"}/
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    
+    = javascript_include_tag 'core/Chart', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'core/bigSlide', 'data-turbolinks-track': 'reload'
+    :javascript
+      $(document).ready(function() { $('.menu-link').bigSlide(); });
+    / script
+    / script
+    %link{:href => "//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic", :rel => "stylesheet", :type => "text/css"}/
+  %body
+    .body-back
+      #menu.panel{:role => "navigation"}
+        .wrap-content
+          .search
+            %form
+              %input{:onblur => "if (this.value == '') {this.value = 'Search';}", :onfocus => "this.value = '';", :required => "", :type => "search", :value => "Search"}/
+              %input{:type => "submit", :value => " "}/
+          .profile-menu.text-center
+            =image_tag "home/pic3.png", {class: "img-circle border-effect"}
+            %h3 kimberly Thompson
+      .phone-box.wrap.push
+        .menu-notify
+          .profile-left  
+          .Profile-mid
+            %h5.pro-link App Store
+          .clearfix
+        .recommended
+          .recommended-app
+            .overlay
+            .app-image
+              =image_tag "home/APP-1.jpg"
+            .col-md-12.app-info
+              %h3 Pokemon GO
+              %h4
+                App de la semana
+                %small
+                  %span.label.label-warning.text-small featured
+              .clearfix
+              %p Venusaur, Charizard, Blastoise, Pikachu, and many other Pokémon have been discovered on planet Earth! Now’s your chance to discover and capture the Pokémon all around...
+              .clearfix
+              .app-menu
+                .app-download
+                  %a{:href => "#"}
+                    Download now
+                    %i.fa.fa-chevron-down
+                .app-readmore
+                  %a{:href => "./show.html"}
+                    Read more
+                    %i.fa.fa-chevron-right
+              .clearfix
+        .menu-notify
+          .profile-left  
+          .Profile-mid
+            %h5.pro-link Aplicaciones
+          .clearfix
+        .details-grid
+          .details-shade
+            .col-md-6.details-left
+              %img.img-circle.border-effect{:alt => " ", :src => "http://a4.mzstatic.com/us/r30/Purple60/v4/c9/ac/d0/c9acd0c9-417e-ca93-a867-048bbdb88895/icon175x175.jpeg"}/
+            .col-md-6.details-right
+              %h3 Clash of Clans
+              %h4 Imprescindibles
+              .clearfix
+              %p ¡Lidera un ejército temible y lleva a tu clan a la gloria! En el campo de batalla te esperan bárbaros furibundos de formidables bigotes y magos pirómanos...
+              %a.app-read-more{:href => "./show.html"}
+                Read more
+                %i.fa.fa-chevron-right
+            .clearfix
+          .details-shade
+            .col-md-6.details-left
+              %img.img-circle.border-effect{:alt => " ", :src => "http://a5.mzstatic.com/us/r30/Purple20/v4/78/16/c2/7816c23d-a77c-2d6c-909a-bfcfd066d9a7/icon175x175.png"}/
+            .col-md-6.details-right
+              %h3 Star Wars™: Commander - Squad Wars
+              %h4 Imprescindibles
+              .clearfix
+              %p The Galactic War rages on. Where does your allegiance lie? Will you side with the Rebellion or the Empire?
+              %a.app-read-more{:href => "./show.html"}
+                Read more
+                %i.fa.fa-chevron-right
+            .clearfix
+          .details-shade
+            .col-md-6.details-left
+              %img.img-circle.border-effect{:alt => " ", :src => "http://a2.mzstatic.com/us/r30/Purple20/v4/05/9b/4c/059b4cd9-bd16-173c-29a7-d1d52a6bc123/icon175x175.png"}/
+            .col-md-6.details-right
+              %h3 Monster Legends Mobile
+              %h4 Imprescindibles
+              .clearfix
+              %p Build the ultimate monster fighting force and lead them to victory in the arena!
+              %a.app-read-more{:href => "./show.html"}
+                Read more
+                %i.fa.fa-chevron-right
+            .clearfix
+    = javascript_include_tag 'core/jquery.nicescroll.js', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'core/scripts.js', 'data-turbolinks-track': 'reload'
