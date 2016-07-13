@@ -1,7 +1,7 @@
 !!!
-%html{:lang => "en"}
+%html.admin{:lang => "en"}
   %head
-    %title AppStore
+    %title AppStore Admin
     %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
     %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
     %meta{:content => "Apps", :name => "keywords"}/
@@ -16,13 +16,8 @@
     %meta{:charset => "", :utf => "8"}/
     = csrf_meta_tags
 
-    = stylesheet_link_tag    'home', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'home', 'data-turbolinks-track': 'reload'
-
-    :javascript
-      $(document).ready(function() { $('.menu-link').bigSlide(); });
-    / script
-    / script
+    = stylesheet_link_tag    'admin', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'admin', 'data-turbolinks-track': 'reload'
     %link{:href => "//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic", :rel => "stylesheet", :type => "text/css"}/
   %body
     = yield

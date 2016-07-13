@@ -1,5 +1,13 @@
+
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+@import "overrides";
+@import "percircle";
 
 h4, h5, h6,
 h1, h2, h3 {margin: 0;}

@@ -1,0 +1,9 @@
+#menu.panel{:role => "navigation"}
+  .wrap-content
+    .search
+      %form
+        %input{:onblur => "if (this.value == '') {this.value = 'Search';}", :onfocus => "this.value = '';", :required => "", :type => "search", :value => "Search"}/
+        %input{:type => "submit", :value => " "}/
+    .profile-menu.text-center
+      =image_tag "home/pic3.png", {class: "img-circle border-effect"}
+      %h3 kimberly Thompson

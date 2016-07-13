@@ -1,0 +1,12 @@
+.details-shade
+  .col-md-6.details-left
+    =image_tag app.avatar(:thumb), {class: "img-circle border-effect", alt: app.name}
+  .col-md-6.details-right
+    %h3=app.name
+    %h4 Imprescindibles
+    .clearfix
+    %p=app.short_description
+    %a.app-read-more{:href => app_path(app)}
+      Read more
+      %i.fa.fa-chevron-right
+  .clearfix

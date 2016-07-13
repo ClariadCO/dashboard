@@ -1,0 +1,30 @@
+= form_for @app, html: {class: "form", multipart: true} do |f|
+  - if @app.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@app.errors.count, "error")} prohibited this app from being saved:"
+      %ul
+        - @app.errors.full_messages.each do |msg|
+          %li= msg
+  .form-group
+    = f.label :name
+    = f.text_field :name, {class: "form-control"}
+  .form-group
+    = f.label :app_store
+    = f.text_field :app_store, {class: "form-control"}
+  .form-group
+    = f.label :google_store
+    = f.text_field :google_store, {class: "form-control"}
+  .form-group
+    = f.label :avatar
+    = f.file_field :avatar, {class: "form-control"}
+  .form-group
+    = f.label :background
+    = f.file_field :background, {class: "form-control"}
+  .form-group
+    = f.label :description
+    = f.bootsy_area :description, {class: "form-control"}
+  .form-group
+    = f.label :short_description
+    = f.text_area :short_description, {class: "form-control"}
+  .actions
+    = f.submit 'Save', {class: "btn btn-info btn-block"}

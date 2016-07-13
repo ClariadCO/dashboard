@@ -5,7 +5,8 @@ Rails.application.config.assets.version = '1.0'
 
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
+Rails.application.config.assets.paths << Rails.root.join("app", "assets", "fonts")
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
-Rails.application.config.assets.precompile += %w( core/bigSlide.js core/Chart.js core/jquery.nicescroll.js core/pecircle.js core/scripts.js overrides.css pecircle.css)
+Rails.application.config.assets.precompile += %w( admin.css admin.js core/jquery.nicescroll.js core/scripts.js home.css home.js overrides.css pecircle.css)

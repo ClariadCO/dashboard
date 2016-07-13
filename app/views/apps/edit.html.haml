@@ -1,0 +1,17 @@
+#admin-view
+  .headding-notify
+    .headding-left
+      = link_to apps_path do
+        %h5.pro-link
+          %i.fa.fa-chevron-left
+    .headding-mid
+      %h5.pro-link Editando App
+    .headding-right
+      = link_to @app do
+        %h5.pro-link
+          %i.fa.fa-chevron-eye
+    .clearfix
+  .shade
+    .container
+      .col-md-12.col-sm-12
+        = render 'form'

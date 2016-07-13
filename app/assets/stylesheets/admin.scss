@@ -1,0 +1,50 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+@import "headings";
+
+@import "bootsy";
+
+html.admin { 
+  background: url("home/bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  height: 100%;
+}
+
+body{
+  background: transparent;
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 { font-family: 'Source Sans Pro' }
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: font-url('Source_Sans_Pro/SourceSansPro-Regular.ttf') format('truetype');
+}
+
+#admin-view {
+  padding-top: 55px;
+  height:100%; /* IE6: treaded as min-height*/
+  min-height:100%; /* real browsers */
+
+  background: transparent;
+  display: block;
+  .shade{
+    background:rgba(22, 21, 23, 0.6);
+    padding: 20px 0;
+    color: white;
+
+    height: auto;
+    min-height: 100%;
+  }
+  textarea{
+    min-height: 200px;
+  }
+}
