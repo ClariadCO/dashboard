@@ -70,7 +70,7 @@ class AppsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def app_params
-      params.require(:app).permit(:name, :description, :short_description, :uid, :app_store, :google_store, :avatar, :background)
+      params.require(:app).permit(:name, :description, :short_description, :uid, :app_store, :google_store, :avatar, :background, :app_type, :featured)
     end
 
     def select_layout

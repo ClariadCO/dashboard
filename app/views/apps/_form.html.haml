@@ -8,12 +8,14 @@
   .form-group
     = f.label :name
     = f.text_field :name, {class: "form-control"}
-  .form-group
-    = f.label :app_store
-    = f.text_field :app_store, {class: "form-control"}
-  .form-group
-    = f.label :google_store
-    = f.text_field :google_store, {class: "form-control"}
+  - if @app.app_type == "ios"
+    .form-group
+      = f.label :app_store
+      = f.text_field :app_store, {class: "form-control"}
+  -else
+    .form-group
+      = f.label :google_store
+      = f.text_field :google_store, {class: "form-control"}
   .form-group
     = f.label :avatar
     = f.file_field :avatar, {class: "form-control"}

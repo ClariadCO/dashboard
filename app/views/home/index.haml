@@ -1,34 +1,35 @@
 .body-back
   .phone-box.wrap.push
-    .menu-notify
-      .profile-left  
-      .Profile-mid
-        %h5.pro-link App Store
-      .clearfix
-    .recommended
-      .recommended-app
-        .overlay
-        .app-image
-          =image_tag @featured.background(:cover)
-        .col-md-12.app-info
-          %h3=@featured.name
-          %h4
-            App de la semana
-            %small
-              %span.label.label-warning.text-small featured
-          .clearfix
-          %p=@featured.short_description
-          .clearfix
-          .app-menu
-            .app-download
-              %a{:href => @featured.app_store}
-                Download now
-                %i.fa.fa-chevron-down
-            .app-readmore
-              %a{:href => app_path(@featured)}
-                Read more
-                %i.fa.fa-chevron-right
-          .clearfix
+    -unless @featured.nil?
+      .menu-notify
+        .profile-left  
+        .Profile-mid
+          %h5.pro-link App Store
+        .clearfix
+      .recommended
+        .recommended-app
+          .overlay
+          .app-image
+            =image_tag @featured.background(:cover)
+          .col-md-12.app-info
+            %h3=@featured.name
+            %h4
+              App de la semana
+              %small
+                %span.label.label-warning.text-small featured
+            .clearfix
+            %p=@featured.short_description
+            .clearfix
+            .app-menu
+              .app-download
+                = link_to @featured.download_url, {target: "_blank"} do
+                  Download now
+                  %i.fa.fa-chevron-down
+              .app-readmore
+                %a{:href => app_path(@featured)}
+                  Read more
+                  %i.fa.fa-chevron-right
+            .clearfix
     .menu-notify
       .profile-left  
       .Profile-mid

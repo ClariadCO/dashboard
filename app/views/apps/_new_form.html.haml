@@ -1,0 +1,43 @@
+= form_for @app, html: {class: "form", multipart: true} do |f|
+  - if @app.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@app.errors.count, "error")} prohibited this app from being saved:"
+      %ul
+        - @app.errors.full_messages.each do |msg|
+          %li= msg
+  .form-group
+    = f.label "Select Store"
+    - kind_collection = [OpenStruct.new({id: "android", name: "Google Store"}), OpenStruct.new({id: "ios", name: "App Store"})]
+    = f.collection_select(:app_type, kind_collection, :id, :name, {}, {class: "form-control"})
+  .form-group.appstore
+    = f.label :app_store
+    = f.text_field :app_store, {class: "form-control"}
+  .form-group.googlestore
+    = f.label :google_store
+    = f.text_field :google_store, {class: "form-control"}
+  .form-group
+    = f.label "Featured"
+    - kind_collection = [OpenStruct.new({id: true, name: "Featured"}), OpenStruct.new({id: false, name: "Not Featured"})]
+    = f.collection_select(:featured, kind_collection, :id, :name, {}, {class: "form-control"})
+  .actions
+    = f.submit 'Save', {class: "btn btn-info btn-block"}
+:javascript
+  $(document).ready(function(){
+    var disable_or_enable = function(select){
+      var kind = $(select).val()
+
+      if(kind == "ios"){
+        $("form").find(".appstore").removeClass("hidden")
+        $("form").find(".googlestore").addClass("hidden")
+      }else{
+        $("form").find(".appstore").addClass("hidden")
+        $("form").find(".googlestore").removeClass("hidden")
+      }
+    };
+
+    $("select[name*='[app_type]']").change(function(ev){
+      disable_or_enable(this)
+    });
+
+    $("select[name*='[app_type]']").trigger("change");
+  })

@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   mount Bootsy::Engine => '/bootsy', as: 'bootsy'
   
   resources :apps
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  
+  match '/store-unavailable' => 'home#store_off', :via => :get, as: :store_off
   root "home#index"
 end

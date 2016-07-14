@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160713094206) do
+ActiveRecord::Schema.define(version: 20160713230730) do
 
   create_table "apps", force: :cascade do |t|
     t.string   "name"
@@ -31,6 +31,9 @@ ActiveRecord::Schema.define(version: 20160713094206) do
     t.datetime "background_updated_at"
     t.boolean  "featured",                default: false
     t.string   "slug"
+    t.string   "itunes_data"
+    t.string   "googlestore_data"
+    t.string   "app_type"
   end
 
 end

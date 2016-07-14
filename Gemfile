@@ -8,12 +8,18 @@ gem 'haml'
 gem 'haml-rails'
 
 
+gem "addressable"
+
 # Use SCSS for stylesheets
 gem 'bootstrap-sass', '3.3.6'
 gem "bootstrap-wysihtml5-rails"
 gem 'bootsy'
+gem 'browser'
 
+gem 'faraday'
+gem 'faraday_middleware'
 gem 'font-awesome-sass', '~> 4.5.0'
+
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
