@@ -12,7 +12,7 @@
 # Ignore Byebug command history file.
 .byebug_history
 
-/public/assets/.sprockets-manifest-*
+/public/assets/*
 
 .gitignore
 # Ignore the default SQLite database.
