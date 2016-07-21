@@ -15,11 +15,15 @@ class App < ApplicationRecord
   before_create :import_from
 
   def download_url
-    case self.app_type
-    when "ios"
-      self.app_store
-    when "android"
-      self.google_store
+    if self.download_link.nil?
+      case self.app_type
+      when "ios"
+        self.app_store
+      when "android"
+        self.google_store
+      end
+    else
+      self.download_link
     end
   end
 

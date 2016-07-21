@@ -16,6 +16,8 @@ gem "bootstrap-wysihtml5-rails"
 gem 'bootsy'
 gem 'browser'
 
+gem 'devise'
+
 gem 'faraday'
 gem 'faraday_middleware'
 gem 'font-awesome-sass', '~> 4.5.0'
