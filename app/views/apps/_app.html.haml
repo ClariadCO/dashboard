@@ -9,4 +9,8 @@
     %a.app-read-more{:href => app_path(app)}
       Read more
       %i.fa.fa-chevron-right
+    -if current_user
+      %a.app-edit{:href => edit_app_path(app)}
+        Edit
+        %i.fa.fa-chevron-right
   .clearfix

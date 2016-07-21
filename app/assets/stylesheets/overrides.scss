@@ -85,7 +85,8 @@
   text-align: left;
   height: 40px;
   line-height: 40px;
-  display: block;
+  display: inline-block;
+  width: 49%
 }
 
 .app-info-open{
@@ -105,10 +106,12 @@
   margin: 20px 0;
 }
 
-.app-read-more{
+.app-read-more,
+.app-edit{
   color:white;
   text-align: left;
-  display: block;
+  display: inline-block;
   font-size: 10px;
   margin-top: 10px;
+  width: 49%;
 }
