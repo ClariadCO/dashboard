@@ -6,4 +6,10 @@ class ApplicationController < ActionController::Base
   def set_browser
     @browser = Browser.new(request.env["HTTP_USER_AGENT"])
   end
+
+  def authenticate_admin!
+    unless current_user and current_user.is_admin?
+      redirect_to root_path
+    end
+  end
 end

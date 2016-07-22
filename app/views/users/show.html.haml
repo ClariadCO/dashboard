@@ -1,0 +1,11 @@
+.container.text-center
+  .col-sm-12
+    .page-header
+      %small#notice= notice
+      %h1=@user.email
+    .page-body
+      .label.label-info=@user.role.name
+    .page-footer
+      %br/
+      = link_to 'Edit', edit_user_path(@user), {class: "btn btn-info"}
+      = link_to 'Back', users_path, {class: "btn btn-info"}

@@ -1,5 +1,8 @@
 class AppsController < ApplicationController
   layout :select_layout
+
+  before_action :authenticate_user!, only: [:index]
+  before_action :authenticate_admin!, except: [:index, :show]
   before_action :set_app, only: [:show, :edit, :update, :destroy]
 
   # GET /apps

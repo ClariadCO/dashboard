@@ -1,0 +1,19 @@
+= form_for @user, html: {class: "form", multipart: true} do |f|
+  - if @user.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@user.errors.count, "error")} prohibited this user from being saved:"
+      %ul
+        - @user.errors.full_messages.each do |msg|
+          %li= msg
+  .form-group
+    = f.label :username
+    = f.text_field :username, {class: "form-control"}
+  .form-group
+    = f.label :email
+    = f.text_field :email, {class: "form-control"}
+  .form-group
+    = f.label :roles
+    %br/
+    = collection_select(:user, :role_id, Role.all, :id, :name, {prompt: true}, {class: "form-control"})
+  .actions
+    = f.submit 'Save', {class: "btn btn-info btn-block"}

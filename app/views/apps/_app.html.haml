@@ -9,7 +9,7 @@
     %a.app-read-more{:href => app_path(app)}
       Read more
       %i.fa.fa-chevron-right
-    -if current_user
+    -if current_user and current_user.is_admin?
       %a.app-edit{:href => edit_app_path(app)}
         Edit
         %i.fa.fa-chevron-right
