@@ -11,11 +11,11 @@ class HomeController < ApplicationController
     @apps = []
     @featured = nil
     if @browser.platform.ios?
-      @featured = (App.ios.featured.count > 0) ? App.ios.featured.first : nil
+      @featured = (App.ios.featured.count > 0) ? App.ios.featured.last : nil
       @apps = App.ios.not_featured.all
     end
     if @browser.platform.android?
-      @featured = (App.android.featured.count > 0) ? App.android.featured.first : nil
+      @featured = (App.android.featured.count > 0) ? App.android.featured.last : nil
       @apps = App.android.not_featured.all
     end
     

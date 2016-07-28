@@ -9,9 +9,11 @@
     .headding-right
       = link_to @app do
         %h5.pro-link
-          %i.fa.fa-chevron-eye
+          %i.fa.fa-eye
     .clearfix
   .shade
     .container
       .col-md-12.col-sm-12
         = render 'form'
+        %hr/
+        %a.btn.btn-danger.btn-block{"data-confirm" => "Are you sure?", "data-method" => "delete", :href => app_path(@app), :rel => "nofollow"} Destroy
