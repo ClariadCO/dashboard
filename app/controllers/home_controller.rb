@@ -19,7 +19,10 @@ class HomeController < ApplicationController
       @apps = App.android.not_featured.all
     end
     
-    @apps = App.all if current_user.role.name == "admin"
+    if current_user.role.name == "admin"
+      @featured = (App.featured.count > 0) ? App.featured.last : nil
+      @apps = App.all 
+    end
     
     if @apps.count == 0
       redirect_to :store_off and return
