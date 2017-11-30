@@ -34,7 +34,6 @@ ActiveRecord::Schema.define(version: 20160721234458) do
     t.string   "itunes_data"
     t.string   "googlestore_data"
     t.string   "app_type"
-    t.string   "downlaod_link"
     t.string   "download_link"
   end
 
