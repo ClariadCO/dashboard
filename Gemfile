@@ -31,6 +31,10 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'passenger'
 
+gem 'rails_12factor', group: :production
+
+gem 'sprockets_better_errors'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 
