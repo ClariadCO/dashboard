@@ -1,8 +1,9 @@
 = form_for @user, html: {class: "form", multipart: true} do |f|
   - if @user.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@user.errors.count, "error")} prohibited this user from being saved:"
-      %ul
+    #error_explanation.alert.alert-danger.alert-dismissible
+      %h4= "#{pluralize(@user.errors.count, "error")} prohibited this user from being saved:"
+      %br
+      %ul.small.list-unstyled.list-group-item-danger
         - @user.errors.full_messages.each do |msg|
           %li= msg
   .form-group
@@ -11,6 +12,9 @@
   .form-group
     = f.label :email
     = f.text_field :email, {class: "form-control"}
+  .form-group
+    = f.label :password
+    = f.password_field :password, {class: "form-control"}
   .form-group
     = f.label :roles
     %br/
