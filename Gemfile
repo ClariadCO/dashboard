@@ -11,7 +11,7 @@ gem 'haml-rails'
 gem "addressable"
 
 # Use SCSS for stylesheets
-gem 'bootstrap-sass', '3.3.6'
+gem 'bootstrap-sass', '~> 3.3.7'
 gem "bootstrap-wysihtml5-rails"
 gem 'bootsy'
 gem 'browser'

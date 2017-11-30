@@ -53,10 +53,10 @@ GEM
     airbrussh (1.0.2)
       sshkit (>= 1.6.1, != 1.7.0)
     arel (7.0.0)
-    autoprefixer-rails (6.3.7)
+    autoprefixer-rails (7.1.6)
       execjs
     bcrypt (3.1.11)
-    bootstrap-sass (3.3.6)
+    bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
     bootstrap-wysihtml5-rails (0.3.3.8)
@@ -252,7 +252,7 @@ PLATFORMS
 DEPENDENCIES
   addressable
   bcrypt (~> 3.1.7)
-  bootstrap-sass (= 3.3.6)
+  bootstrap-sass (~> 3.3.7)
   bootstrap-wysihtml5-rails
   bootsy
   browser
