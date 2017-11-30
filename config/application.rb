@@ -14,5 +14,7 @@ module Dashboard
     config.generators do |g| 
       g.template_engine :haml
     end
+
+    config.serve_static_assets = true
   end
 end
